@@ -1,5 +1,99 @@
-@import url(../Sass/base/_base.scss);
-@import url(../Sass/composants/_logo.scss);
-@import url(../Sass/layout/_header.scss);
-@import url(../Sass/pages/_index.scss);
-@import url(../Sass/layout/_footer.scss);
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+body h1 {
+  padding: 0px;
+  margin: 0px;
+  font-family: Shrikhand;
+}
+
+body a:link, body a:visited {
+  color: #fff9aa;
+  text-decoration: none;
+}
+
+header {
+  background-color: #e95500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  color: #ffda37;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul li {
+  padding-right: 40px;
+  font-size: 18px;
+}
+
+section {
+  background-color: #ff8f0f9c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ff8f0f9c;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer ul li {
+  padding-right: 40px;
+  font-size: 18px;
+}

@@ -1,0 +1,18 @@
+
+@mixin flex-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin margin-left-right {
+    margin-left: 20px;
+    margin-right: 20px;   
+}
+
+@mixin padding-left-right {
+    padding-left: 20px;
+    padding-right: 20px;   
+}
+

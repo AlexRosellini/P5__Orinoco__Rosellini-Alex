@@ -1,0 +1,22 @@
+header {
+    background-color: $secondary;
+    display: flex;
+    justify-content: space-between;
+    @include padding-left-right;
+    height: 100px;
+    align-items: center;
+
+    & h1 {
+        color: $primary;
+    }
+
+    & ul {
+        display: flex;
+
+        & li {
+            padding-right: 40px;
+            font-size:  18px;
+
+        }
+    }
+}
