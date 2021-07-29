@@ -1,0 +1,5 @@
+@import url(../Sass/base/_base.scss);
+@import url(../Sass/composants/_logo.scss);
+@import url(../Sass/layout/_header.scss);
+@import url(../Sass/pages/_index.scss);
+@import url(../Sass/layout/_footer.scss);
