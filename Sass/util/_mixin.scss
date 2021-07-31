@@ -11,8 +11,21 @@
     margin-right: 20px;   
 }
 
+@mixin padding-left {
+    padding-left: 20px;
+}
+
+@mixin margin-top-bottom {
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+
 @mixin padding-left-right {
     padding-left: 20px;
     padding-right: 20px;   
 }
 
+@mixin padding-top-bottom {
+    padding-top: 20px;
+    padding-bottom: 20px; 
+}
