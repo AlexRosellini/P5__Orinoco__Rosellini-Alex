@@ -18,11 +18,12 @@
     <div class="card__description"><p>${response[i].description}</p></div>
     <div class = "card__bottom">
     <div class="card__price"><p>Price : ${response[i].price/100} €</p></div>
-    <div class="card__id"><a href="product.html?${response[i]._id}">Voir ce produit</a></div>
+    <div class="card__id"><a href="product.html#${response[i]._id}">Voir ce produit</a></div>
     </div>
     </div>`
 
     /*Ensuite, il nous reste à injecter notre HTML dans notre page*/
     document.querySelector(".cards").innerHTML = ourHtml
-    }
-  })
+
+  }
+  });
