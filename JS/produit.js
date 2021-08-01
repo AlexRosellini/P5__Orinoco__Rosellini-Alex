@@ -25,15 +25,26 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
     </div>
     </div>`
 
+
+    /*
+    notre but est ensuite d'ajouter chacune des options à nos produits, soit en notre cas, des couleurs. 
+    pour ce faire, on utilise une boucle for avec en paramètre 'j' qui va se positioner sur chaque couleur. Ensuite, on créer les éléements
+    via create element, classname et textcontent ou nous ajoutons nos options.
+    */
+
     document.querySelector(".card").innerHTML = htmlProduit
-   
-    let choice = document.querySelector(".card__colors")
-    colors.forEach (function (colors) {
-        let option = document.createElement("option");
-        option.textContent = colors;
-        choice.appendChild(option);
-    })
 
-
+    let choice = document.querySelector('.card__colors')
+    for (j = 0; j < response.colors.length; j++) {
+    let option = document.createElement('option')
+    option.className = ".card__color"
+    option.textContent = response.colors[j];
+    choice.appendChild(option)
+       
+    }
 }) 
 
+
+
+
+    
