@@ -21,6 +21,8 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
     <div class="card__price"><p>Price : ${response.price/100} €</p></div>
     <label class="card__label"><h3>Personalisez votre ours!</h3></label>
     <select class="card__colors"></select>
+    <input type="number" class="card__quantity" name="Ours" min="1" max="99" value="1" oninput="this.value = 
+    !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null">
     <div class="card__button"><p>Ajouter au panier</p></div>
     </div>
     </div>`
@@ -37,13 +39,51 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
     for (j = 0; j < response.colors.length; j++) {
     let option = document.createElement('option')
     option.className = ".card__color"
+    option.id = ".card__color"
     option.textContent = response.colors[j];
     choice.appendChild(option)
-       
-    }
-}) 
-
-
-
-
+    }       
+  
     
+    const envoyerPanier = document.querySelector('.card__button')
+    console.log(envoyerPanier)
+
+    envoyerPanier.addEventListener('click', (event) =>{
+
+
+    /*Maintenant, nous allons récupérer les données utilisateurs lors de l'ajout du panier*/
+    let colorChoice = document.querySelector('.card__colors')
+        colorChoice = colorChoice[colorChoice.selectedIndex].textContent;
+
+    let quantity = parseInt(document.querySelector('.card__quantity').value);
+        
+
+
+    let produitstring = {
+        _id: response.imageUrl,
+        name: response.name,
+        price: response.price,
+        description: response.description,
+        imageUrl: response.imageUrl,
+        option: colorChoice,
+        quantity: quantity,
+        
+    }
+    console.table(produitstring)
+
+    let userPanier = JSON.parse(localStorage.getItem("produit"));
+    if (userPanier) {
+        userPanier.push(produitstring)
+        localStorage.setItem("produit", JSON.stringify(userPanier))
+
+    } else {
+        userPanier = []; 
+        userPanier.push(produitstring)
+        localStorage.setItem("produit", JSON.stringify(userPanier))
+    }
+         
+    })
+});    
+
+
+

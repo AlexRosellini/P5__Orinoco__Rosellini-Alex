@@ -131,6 +131,24 @@ section {
   font-weight: 900;
 }
 
+.cart-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-top: 1px solid gray;
+  background: lightgray;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cart-card p {
+  margin-left: 10px;
+}
+
 footer {
   height: 50px;
   background-color: #ff8f0f9c;

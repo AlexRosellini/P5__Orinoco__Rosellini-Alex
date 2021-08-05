@@ -1,0 +1,11 @@
+.cart-card {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid gray;
+    background: rgb(211, 211, 211);
+    @include padding-left-right;
+    
+    p {
+        margin-left:  10px;
+    }
+}
