@@ -1,8 +1,41 @@
-`<div class="card">
-    <div class="card__img"><img src="${userPanier[i].imageUrl}" alt="image produit"></div>
-    <div class="card__nom"><p>${userPanier[i].name}</p></div>
-    <div class="card__option"><p>${userPanier[i].option}</p></div>
-    <div class="card__quantity"><p>${userPanier[i].quantity}</p></div>
-    <div class="card__quantity"><p>1</p></div>
-    <div class="card__price"><p>${userPanier[i].price/100} €</p></div>
-</div> `
+<!-- //
+//
+//Expects request to contain:
+//contact: {
+//  firstName: string,
+//  lastName: string,
+//  address: string,
+//  city: string,
+//  email: string
+//}
+//products: [string] <-- array of product _id
+//
+//
+//
+-->
+
+<h2>Merci de remplir le formulaire ci-dessous pour completer votre commande</h2>
+<div class="contact">
+    <div class="contact__info">
+        <label for="firstName">Prénom</label>
+        <input type="text" name="firstName" class="firstname" placeholder="Nero" required>
+    </div>
+    <div class="contact__info">
+        <label for="lastName">Nom de famille</label>
+        <input type="text" name="lastName" class="lastName" placeholder="Claudius" required>
+    </div>
+    <div class="contact__info">
+        <label for="adress">Adresse</label>
+        <input type="text" name="address" class="address" placeholder="Via della Domus Aurea, 1, 00184" required>
+    </div>
+    <div class="contact__info">
+        <label for="city">ville</label>
+        <input type="text" name="city" class="city" placeholder="Rome" required>
+    </div>
+    <div class="contact__info">
+        <label for="email">Adresse Email</label>
+        <input type="text" name="email" class="email" placeholder="UmuEmpresspadoru@roma.rome" required>
+    </div>
+    <button>Valider la commande</button>
+</div>
+
