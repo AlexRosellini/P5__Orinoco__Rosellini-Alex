@@ -5,7 +5,8 @@ console.log(userPanier);
 
 let fullCart = [];
 
-if (userPanier === null) {
+
+if (userPanier === null || userPanier == 0) {
   let emptyCart = `<div class="panier__empty"><p>Votre panier est vite, <a href="index.html">Parcourez nos produits</a>`;
   document.querySelector(".panier").innerHTML = emptyCart;
 } else {
@@ -15,20 +16,23 @@ if (userPanier === null) {
          <div class="cart-card__nom"><p>${userPanier[i].name}</p></div>
          <div class="cart-card__option"><p>${userPanier[i].option}</p></div>
          <div class="cart-card__quantity"><p>${userPanier[i].quantity}</p></div>
-         <div class="cart-card__price"><p>${
-           (userPanier[i].price / 100) * userPanier[i].quantity
-         } €</p></div>
-     </div> `;
+         <div class="cart-card__price"><p>${(userPanier[i].price / 100) * userPanier[i].quantity} €</p></div>
+         <button class="cart-card__delete">Supprimer l'article</button>
+         </div> `;
   }
 }
+
 
 let calculPrice = "";
 let iteratePrice = [];
 for (let l = 0; l < userPanier.length; l++) {
   let productsInCart = userPanier[l].price / 100;
   iteratePrice.push(productsInCart);
-  console.log(iteratePrice);
+;
 }
+
+
+
 
 let form = `<h2>Merci de remplir le formulaire ci-dessous pour completer votre commande</h2>
 <div class="contact">
@@ -59,7 +63,7 @@ let form = `<h2>Merci de remplir le formulaire ci-dessous pour completer votre c
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 {
   calculPrice = iteratePrice.reduce(reducer);
-  console.log(calculPrice);
+
 }
 
 let finalPrice = `<div call = panier__finalPrice><p> ${calculPrice} €</p></div>`;
@@ -145,3 +149,15 @@ sendform.addEventListener("click", (event) => {
         window.location.replace("./confirmation.html");
     }) 
 });
+
+
+let btnDelete = document.querySelectorAll(".cart-card__delete");
+console.log(btnDelete)
+for (let i = 0; i < btnDelete.length; i++) {
+    btnDelete[i].addEventListener("click", (e) =>{
+        e.preventDefault();
+        userPanier.splice(i, 1)
+        localStorage.setItem("produit", JSON.stringify(userPanier))
+        window.location.reload()
+    })
+}
