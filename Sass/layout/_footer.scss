@@ -8,6 +8,11 @@ footer {
     align-items: center;
 
 
+    
+    & a, a:visited {
+        color: rgb(150, 62, 11) ;
+    }
+
     & ul {
         display: flex;
 

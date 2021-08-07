@@ -14,8 +14,8 @@ fetch("http://localhost:3000/api/teddies")
       ourHtml += `<div class="card">
     <div class="card__name"><h3>${response[i].name}</h3></div>
     <div class="card__img"><img src="${response[i].imageUrl}"></div>
-    <div class="card__description"><p>${response[i].description}</p></div>
     <div class = "card__bottom">
+    <div class="card__description"><p>${response[i].description}</p></div>
     <div class="card__price"><p>Price : ${response[i].price / 100} €</p></div>
     <div class="card__id"><a href="product.html#${
       response[i]._id

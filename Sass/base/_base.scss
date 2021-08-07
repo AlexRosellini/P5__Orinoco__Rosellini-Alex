@@ -20,7 +20,11 @@ body {
     }
 
     & a:link, a:visited {
-        color: #fff9aa;
         text-decoration: none;
+        color: black;
+    }
+
+    & a:hover {
+        text-decoration: underline;
     }
 }

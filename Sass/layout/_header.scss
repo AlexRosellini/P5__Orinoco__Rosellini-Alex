@@ -10,6 +10,10 @@ header {
         color: $primary;
     }
 
+    & a, a:visited {
+        color: rgb(250, 224, 137);
+    }
+
     & ul {
         display: flex;
 
