@@ -31,10 +31,16 @@ for (let l = 0; l < userPanier.length; l++) {
 ;
 }
 
+let htmlHeader = `<div class="header">
+<div class="header__name"><p>Noms</p></div>
+<div class="header__option"><p>Option</p></div>
+<div class="header__quantity"><p>Quantitée</p></div>
+<div class="header__price"><p>Prix</p></div>
+<div class="header__supr"><p>Supprimer article</p></div>
+</div>`
 
 
-
-let form = `<h2>Merci de remplir le formulaire ci-dessous pour completer votre commande</h2>
+let form = `<h3>Merci de remplir le formulaire ci-dessous pour completer votre commande</h3>
 <div class="contact">
     <div class="contact__info">
         <label for="firstName">Prénom</label>
@@ -66,8 +72,8 @@ const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
 }
 
-let finalPrice = `<div call = panier__finalPrice><p> ${calculPrice} €</p></div>`;
-document.querySelector(".panier").innerHTML = fullCart + finalPrice + form;
+let finalPrice = `<div class = panier__finalPrice><p>Prix total: ${calculPrice} €</p></div>`;
+document.querySelector(".panier").innerHTML = htmlHeader + fullCart + finalPrice + form;
 
 let sendform = document.querySelector(".sendForm");
 sendform.addEventListener("click", (event) => {
@@ -124,7 +130,7 @@ sendform.addEventListener("click", (event) => {
   ) {
     console.log(contact);
   } else {
-    console.log("formulaire invalide");
+    alert("formulaire invalide");
   }
 
   let products = [];

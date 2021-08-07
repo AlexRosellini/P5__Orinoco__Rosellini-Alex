@@ -1,0 +1,43 @@
+.product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+
+
+    &-product__name  {
+        text-align: center;
+    }
+
+    & img {
+        object-fit: cover;
+        height: 400px;
+    }
+
+    &-product__bottom {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &-product__label {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    &-product__button {
+        margin-top: 20px;
+    }
+
+    &-product__price {
+        font-weight: 900;
+    }
+
+    &-product__personalize {
+         font-family:Verdana, Geneva, Tahoma, sans-serif;   
+         font-size: 20px; 
+        }
+}
+

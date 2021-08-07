@@ -13,17 +13,20 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
     console.log(response.name) 
     
     /*On ajoute ensuite notre Html*/
+
     let htmlProduit = `<div class="card">
-    <div class="card__name"><h3>${response.name}</h3></div>
-    <div class="card__img"><img src="${response.imageUrl}"></div>
-    <div class="card__description"><p>${response.description}</p></div>  
-    <div class = "card__bottom">
-    <div class="card__price"><p>Price : ${response.price/100} €</p></div>
-    <label class="card__label"><h3>Personalisez votre ours!</h3></label>
-    <select class="card__colors"></select>
-    <input type="number" class="card__quantity" name="Ours" min="1" max="99" value="1" oninput="this.value = 
+    <div class="card-product__name"><h2>${response.name}</h2></div>
+    <div class="card-product__img"><img src="${response.imageUrl}"></div>
+    <div class="card-product__description"><p>${response.description}</p></div>  
+    <div class = "card-product__bottom">
+    <div class="card-product__price"><p>Prix: ${response.price/100} €</p></div>
+    <div class="card-product__personalize"><h3>Personalisez votre ours!</h3></div>
+    <label for="color" class = card-product__label>Couleur:</label>
+    <select class="card-product__colors" name="color"></select>
+    <label class = "card-product__label"for="Quantity">Quantitée:</label>
+    <input type="number" class="card-product__quantity" name="Quantity" min="1" max="99" value="1" oninput="this.value = 
     !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null">
-    <div class="card__button"><p>Ajouter au panier</p></div>
+    <button class="card-product__button"><p>Ajouter au panier</p></button>
     </div>
     </div>`
     
@@ -35,30 +38,28 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
     via create element, classname et textcontent ou nous ajoutons nos options.
     */
 
-    let choice = document.querySelector('.card__colors')
+    let choice = document.querySelector('.card-product__colors')
     for (j = 0; j < response.colors.length; j++) {
     let option = document.createElement('option')
-    option.className = ".card__color"
+    option.className = ".card-product__color"
     option.id = ".card__color"
     option.textContent = response.colors[j];
     choice.appendChild(option)
     }       
   
     
-    const envoyerPanier = document.querySelector('.card__button')
+    const envoyerPanier = document.querySelector('.card-product__button')
     console.log(envoyerPanier)
 
     envoyerPanier.addEventListener('click', (event) =>{
 
 
     /*Maintenant, nous allons récupérer les données utilisateurs lors de l'ajout du panier*/
-    let colorChoice = document.querySelector('.card__colors')
+    let colorChoice = document.querySelector('.card-product__colors')
         colorChoice = colorChoice[colorChoice.selectedIndex].textContent;
 
-    let quantity = parseInt(document.querySelector('.card__quantity').value);
+    let quantity = parseInt(document.querySelector('.card-product__quantity').value);
         
-
-
     let produitstring = {
         _id: response._id,
         name: response.name,

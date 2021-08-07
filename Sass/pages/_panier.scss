@@ -1,11 +1,61 @@
-.cart-card {
+.panier {
+    @include flex-c;
+    flex-direction:column;
+}
+
+.header {
     display: flex;
     flex-direction: row;
-    border-top: 1px solid gray;
-    background: rgb(211, 211, 211);
+    background-color: white;
+    width: 80%;
+    justify-content: space-between;
     @include padding-left-right;
-    
-    p {
-        margin-left:  10px;
+    padding-top: 10px;
+    font-weight: 900;
+
+    &__option {
+        padding-left: 30px;
+    }
+
+    &__price {
+        padding-right: 10px;
+    }
+
+}
+
+.cart-card {
+    display: flex;
+    flex-direction:row;
+    background-color: white;
+    width: 80%;
+    justify-content: space-between;
+    @include padding-left-right;
+    padding-bottom: 20px;
+}
+
+.panier__finalPrice {
+    font-weight: 900;
+}
+
+.contact {
+    background-color: white;
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    width: 40%;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        @include padding-left-right;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    & .sendForm {
+        @include padding-left-right;
+        margin-top: 10px;
+        margin-right: 100px;
+        margin-left: 100px;
     }
 }

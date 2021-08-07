@@ -14,7 +14,7 @@ body p {
   font-size: 14px;
 }
 
-body h1, body h2, body h3 {
+body h1, body h2 {
   padding: 0px;
   margin: 0px;
   font-family: Shrikhand;
@@ -131,6 +131,101 @@ section h2 {
   color: rgba(99, 67, 0, 0.89);
 }
 
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-product__name {
+  text-align: center;
+}
+
+.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 400px;
+}
+
+.card-product__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.card-product__label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-product__button {
+  margin-top: 20px;
+}
+
+.card-product__price {
+  font-weight: 900;
+}
+
+.card-product__personalize {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+
+.panier {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: white;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  font-weight: 900;
+}
+
+.header__option {
+  padding-left: 30px;
+}
+
+.header__price {
+  padding-right: 10px;
+}
+
 .cart-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,14 +234,53 @@ section h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border-top: 1px solid gray;
-  background: lightgray;
+  background-color: white;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 20px;
 }
 
-.cart-card p {
-  margin-left: 10px;
+.panier__finalPrice {
+  font-weight: 900;
+}
+
+.contact {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+}
+
+.contact__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contact .sendForm {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 footer {
