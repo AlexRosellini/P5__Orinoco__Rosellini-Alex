@@ -60,7 +60,7 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
 
 
     let produitstring = {
-        _id: response.imageUrl,
+        _id: response._id,
         name: response.name,
         price: response.price,
         description: response.description,
@@ -69,6 +69,7 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
         quantity: quantity,
         
     }
+
     console.table(produitstring)
 
     let userPanier = JSON.parse(localStorage.getItem("produit"));
@@ -84,6 +85,7 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
          
     })
 });    
+
 
 
 
