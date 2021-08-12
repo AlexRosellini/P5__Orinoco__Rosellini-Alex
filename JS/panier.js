@@ -1,4 +1,4 @@
-let userPanier = JSON.parse(localStorage.getItem("produit"));
+let userPanier = JSON.parse(localStorage.getItem("product"));
 console.log(userPanier);
 
 /*SI le panier est vide*/
@@ -8,7 +8,7 @@ let fullCart = [];
 
 if (userPanier === null || userPanier == 0) {
   let emptyCart = `<div class="panier__empty"><p>Votre panier est vite, <a href="index.html">Parcourez nos produits</a>`;
-  document.querySelector(".panier").innerHTML = emptyCart;
+  document.querySelector(".cart").innerHTML = emptyCart;
 } else {
   for (let i = 0; i < userPanier.length; i++) {
     console.log(userPanier[i].option);
@@ -73,7 +73,7 @@ const reducer = (accumulator, currentValue) => accumulator + currentValue;
 }
 
 let finalPrice = `<div class = panier__finalPrice><p>Prix total: ${calculPrice} €</p></div>`;
-document.querySelector(".panier").innerHTML = htmlHeader + fullCart + finalPrice + form;
+document.querySelector(".cart").innerHTML = htmlHeader + fullCart + finalPrice + form;
 
 let sendform = document.querySelector(".sendForm");
 sendform.addEventListener("click", (event) => {

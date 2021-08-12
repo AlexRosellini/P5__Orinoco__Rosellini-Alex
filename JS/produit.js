@@ -45,7 +45,7 @@ async function getProduit() {
                     colorChoice = colorChoice[colorChoice.selectedIndex].textContent;
                   
                 let quantity = parseInt(document.querySelector('.card-product__quantity').value)   
-                let produitstring = {
+                let productString = {
                     _id: response._id,
                     name: response.name,
                     price: response.price,
@@ -56,17 +56,17 @@ async function getProduit() {
                   
                 }
                   
-                console.table(produitstring)
+                console.table(productString)
                   
-                let userPanier = JSON.parse(localStorage.getItem("produit"));
+                let userPanier = JSON.parse(localStorage.getItem("product"));
                 if (userPanier) {
-                    userPanier.push(produitstring)
-                    localStorage.setItem("produit", JSON.stringify(userPanier))
+                    userPanier.push(productString)
+                    localStorage.setItem("product", JSON.stringify(userPanier))
                   
                 } else {
                     userPanier = [];
-                    userPanier.push(produitstring)
-                    localStorage.setItem("produit", JSON.stringify(userPanier))
+                    userPanier.push(productString)
+                    localStorage.setItem("product", JSON.stringify(userPanier))
                 }
 
                     let htmlConfirm = `<div class="card-bottom__confirm"><p>Votre produit à bien été enregistrer sur votre panier, voulez vous <a href="panier.html">voir votre panier?</a> ou 
