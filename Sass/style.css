@@ -116,6 +116,7 @@ section h2 {
   display: -ms-flexbox;
   display: flex;
   padding-left: 20px;
+  padding-right: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -313,4 +314,66 @@ footer ul {
 footer ul li {
   padding-right: 40px;
   font-size: 18px;
+}
+
+@media screen and (max-width: 900px) {
+  footer, ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-right: 0px;
+  }
+  footer h2, ul h2 {
+    margin-left: -40px;
+  }
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cards img {
+    height: 200px;
+  }
+  .contact {
+    width: 80%;
+  }
+  .contact .sendForm {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 10px;
+  }
+  header ul, header li {
+    padding-right: 0px !important;
+    padding-bottom: 10px;
+  }
 }

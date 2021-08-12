@@ -37,6 +37,7 @@ section {
     &__bottom {
         display: flex;
         @include padding-left;
+        padding-right: 10px;
         flex-direction: column;
     }
 
