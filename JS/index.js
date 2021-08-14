@@ -1,6 +1,6 @@
-/******************/
+/*****************************************************************************/
 
-let pageHTML = ""; //On créer une variable PageHTML vide pour le moment
+let indexHTML = ""; //On créer une variable PageHTML vide pour le moment
 
 /*****************************************************************************/
 //Fonction pour créer notre HTML
@@ -16,17 +16,18 @@ async function indexBuild (products) {  //product est le result de notre premiè
         <div class="card__id"><a href="product.html?id=${products[i]._id}">Voir ce produit</a></div>
         </div>
         </div>`;
-        pageHTML = pageHTML + htmlOk; //Pour chaque itération de notre loop, on ajoute un produit selectioner par [i]
-       document.querySelector(".cards").innerHTML = pageHTML;  //On ajoute le pageHTML au DOM
+        indexHTML = indexHTML + htmlOk; //Pour chaque itération de notre loop, on ajoute un produit selectioner par [i]
+       document.querySelector(".cards").innerHTML = indexHTML;  //On ajoute le pageHTML au DOM
     }
 }
+
 /*****************************************************************************/
 //Fonction en cas d'érreur 
 
 async function failIndex (err) { //err est indiquer par notre catch 
     let htmlFail = `<div class = "Fail"> <p> Oops! Il semble y avoir une érreur de notre côté, merci de réessayer plus tard</p>`
-      pageHTML = pageHTML + htmlFail
-      document.querySelector(".cards").innerHTML = pageHTML;
+      indexHTML = indexHTML + htmlFail
+      document.querySelector(".cards").innerHTML = indexHTML;
       console.log("Error: " + err) //On log l'érreur sur la console.log
 }
 

@@ -19,7 +19,6 @@ async function productBuild(product) {
     </div>`;
 
     document.querySelector(".card").innerHTML = htmlProduit
-
 }
 
 /******************************************************************************/ 
@@ -44,7 +43,8 @@ async function cartBtnEvent (product) {
     sendcart.addEventListener('click', (event) =>{ //La fonction s'applique sur un click du btn 
       
       let quantity = parseInt(document.querySelector('.card-product__quantity').value)   //On créer des variables pour les éléments
-      
+      let pricebyQuantity = product.price / 100 * quantity
+
         if (isNaN(quantity)) { //On empêche que la quantité soit NaN
             alert("La quantité ne doit pas être inférieur à 1")
             return
@@ -56,7 +56,7 @@ async function cartBtnEvent (product) {
       let productString = {  //On créer un objet à envoyer
           _id: product._id,
           name: product.name,
-          price: product.price,
+          price: pricebyQuantity,
           description: product.description,
           imageUrl: product.imageUrl,
           option: colorChoice,
