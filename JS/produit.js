@@ -71,7 +71,7 @@ async function cartBtnEvent (product) {
       userCart.push(productString); //On ajoute notre objet dans l'array
       localStorage.setItem("product", JSON.stringify(userCart)); //On envoie vers le localstorage
 
-          let htmlConfirm = `<div class="card-bottom__confirm"><p>Votre produit à bien été enregistrer sur votre panier, 
+          let htmlConfirm = `<div class="card-product__confirm"><p>Votre produit à bien été enregistrer sur votre panier, 
           voulez vous <a href="panier.html">voir votre panier?</a> ou <a href="index.html">Voir nos autres produits?</a></p>
           </div>`
           document.querySelector(".card").innerHTML =  htmlConfirm; //On remplace l'article par un message de confirmation
@@ -81,7 +81,7 @@ async function cartBtnEvent (product) {
 /******************************************************************************/ 
 
 async function failProduct(err) {
-    let htmlError = `<div class="card-bottom__confirm"><p>Il semble y avoir eu une érreur, nous nous excusons du dérangement
+    let htmlError = `<div class="card-product__confirm"><p>Il semble y avoir eu une érreur, nous nous excusons du dérangement
     <a href="index.html">Souhaitez vous revenir à la boutique?</a></p>
     </div>`
     document.querySelector(".card").innerHTML = htmlError 

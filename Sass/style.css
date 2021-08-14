@@ -144,6 +144,11 @@ section h2 {
           justify-content: center;
 }
 
+.card-product__confirm {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .card-product__name {
   text-align: center;
 }
@@ -183,7 +188,74 @@ section h2 {
   font-size: 20px;
 }
 
-.cart {
+.product-header, .cart-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 20% 15% 30%;
+      grid-template-columns: 20% 20% 15% 30%;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  text-align: center;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  background-color: White;
+}
+
+.cart-section h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cart-card {
+  padding-top: 10px;
+}
+
+.cart-card:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.cart-card button {
+  margin-left: 20px;
+}
+
+.cart-card p {
+  font-size: 13px;
+}
+
+.delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,90 +270,24 @@ section h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  width: 100%;
   background-color: white;
-  width: 80%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  font-weight: 900;
-}
-
-.header__option {
-  padding-left: 30px;
-}
-
-.header__price {
-  padding-right: 10px;
-}
-
-.cart-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background-color: white;
-  width: 80%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-}
-
-.panier__finalPrice {
-  font-weight: 900;
-}
-
-.contact {
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 40%;
 }
 
 .contact__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
-.contact .sendForm {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 10px;
-  margin-right: 100px;
-  margin-left: 100px;
+.sendForm {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -351,29 +357,5 @@ footer ul li {
   }
   .cards img {
     height: 200px;
-  }
-  .contact {
-    width: 80%;
-  }
-  .contact .sendForm {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-bottom: 10px;
-  }
-  header ul, header li {
-    padding-right: 0px !important;
-    padding-bottom: 10px;
   }
 }

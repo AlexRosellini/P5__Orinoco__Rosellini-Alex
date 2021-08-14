@@ -6,6 +6,10 @@
 
 .card {
 
+    &-product__confirm {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
     &-product__name  {
         text-align: center;

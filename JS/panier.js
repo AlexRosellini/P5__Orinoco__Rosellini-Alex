@@ -14,7 +14,6 @@ async function cartBuild(userCart) {
     for (i = 0; i < userCart.length; i++) {
         let fullCart = `</div><div class="cart-card">
         <div class="cart-card__nom"><p>${userCart[i].name}</p></div>
-        <div class="cart-card__option"><p>${userCart[i].option}</p></div>
         <div class="cart-card__quantity"><p>${userCart[i].quantity}</p></div>
         <div class="cart-card__price"><p>${(userCart[i].price)} €</p></div>
         <button class="cart-card__delete">Supprimer l'article</button>
@@ -30,15 +29,14 @@ async function cartBuild(userCart) {
 async function htmlCartBuild(finalPrice) {
     let price = `<div class = panier__finalPrice><p>Prix total: ${finalPrice} €</p></div>`
 
-    let htmlHeader = `<div class="header">
-    <div class="header__name"><p>Noms</p></div>
-    <div class="header__option"><p>Option</p></div>
-    <div class="header__quantity"><p>Quantitée</p></div>
-    <div class="header__price"><p>Prix</p></div>
-    <div class="header__supr"><p>Supprimer article</p></div>
+    let htmlHeader = `<div class="product-header">
+    <div class="product-header__name"><p>Noms</p></div>
+    <div class="product-header__quantity"><p>Quantité</p></div>
+    <div class="product-header__price"><p>Prix</p></div>
+    <div class="product-header__supr"><p>Supprimer article</p></div>
     </div>`
 
-    let deleteAll = `<button class = delete-all>Supprimer tout le panier</div>`
+    let deleteAll = `<div class = "delete"><button class = delete-all>Supprimer tout le panier</button></div>`
 
     let form = `<h3>Merci de remplir le formulaire ci-dessous pour completer votre commande</h3>
     <div class="contact">
@@ -67,9 +65,10 @@ async function htmlCartBuild(finalPrice) {
 
     let card = document.querySelector(".cart")
     card.insertAdjacentHTML("afterbegin", htmlHeader);
-    card.insertAdjacentHTML("beforeend", deleteAll)
-    card.insertAdjacentHTML("beforeend", price); 
-    card.insertAdjacentHTML("beforeend", form);
+    card.insertAdjacentHTML("afterend", price); 
+    card.insertAdjacentHTML("afterend", form);    
+    card.insertAdjacentHTML("afterend", deleteAll)
+
 }
 
 /******************************************************************************/ 
