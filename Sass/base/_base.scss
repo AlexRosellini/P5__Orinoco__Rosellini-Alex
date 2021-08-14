@@ -1,6 +1,13 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
 body {
     margin: 0px;
     padding: 0px;
+    background-color: $tertiary;
 
     & ul {
         list-style-type: none;
@@ -28,3 +35,4 @@ body {
         text-decoration: underline;
     }
 }
+

@@ -1,5 +1,4 @@
 section {
-    background-color: $tertiary;
     flex-direction: column;
     @include padding-top-bottom;
 
@@ -46,8 +45,11 @@ section {
         margin-top: -10px;
     }
 
-    &__id, a, a:visited {
+    &__id, a, a:visited, a:link {
         color: rgba(99, 67, 0, 0.89);
     }
 }
 
+.card:hover {
+    transform: scale(1.01);
+}

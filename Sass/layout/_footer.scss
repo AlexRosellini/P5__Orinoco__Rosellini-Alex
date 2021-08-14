@@ -6,8 +6,7 @@ footer {
     justify-content: space-between;
     @include padding-left-right;
     align-items: center;
-
-
+    bottom: 0;
     
     & a, a:visited {
         color: rgb(150, 62, 11) ;

@@ -9,9 +9,7 @@
 }
 
 .cart-section {
-    
-    
-    
+     
     & h3 {
         display : flex;
         justify-content: center;
@@ -37,6 +35,14 @@
     }
 }
 
+.cart__finalPrice {
+    background-color: White;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
 .delete {
     @include flex-c;
     @include padding-top-bottom;
@@ -48,12 +54,17 @@
     @include flex-c;
     flex-direction: column;
     width: 100%;
+    margin-bottom: -30px;
     background-color: white;
 
     &__info {
         display: flex;
         margin-top: 10px;
         flex-direction: column;
+    }
+
+    input {
+        width: 200px;
     }
 }
 

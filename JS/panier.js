@@ -27,7 +27,7 @@ async function cartBuild(userCart) {
 //Fonction pour créer notre Html 
 
 async function htmlCartBuild(finalPrice) {
-    let price = `<div class = panier__finalPrice><p>Prix total: ${finalPrice} €</p></div>`
+    let price = `<div class = cart__finalPrice><p>Prix total: ${finalPrice} €</p></div>`
 
     let htmlHeader = `<div class="product-header">
     <div class="product-header__name"><p>Noms</p></div>
@@ -65,10 +65,9 @@ async function htmlCartBuild(finalPrice) {
 
     let card = document.querySelector(".cart")
     card.insertAdjacentHTML("afterbegin", htmlHeader);
-    card.insertAdjacentHTML("afterend", price); 
     card.insertAdjacentHTML("afterend", form);    
-    card.insertAdjacentHTML("afterend", deleteAll)
-
+    card.insertAdjacentHTML("afterend", deleteAll);
+    card.insertAdjacentHTML("afterend", price);
 }
 
 /******************************************************************************/ 
@@ -92,7 +91,7 @@ async function deleteCart(userCart) {
 }
 
 /******************************************************************************/ 
-//Fonctions qui gêrent le formulaire
+//Fonctions qui gêre le formulaire et l'envoie sur l'Api
 
 async function form(userCart) {
     
