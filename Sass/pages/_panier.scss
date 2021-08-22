@@ -71,3 +71,12 @@
 .sendForm {
     @include margin-top-bottom;
 }
+
+.panier__empty {
+    text-align: center;
+    min-height: 500px;
+
+    & a, a:link, a:visited {
+        color: rgb(124, 81, 0);
+    }
+}

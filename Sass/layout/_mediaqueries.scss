@@ -1,26 +1,36 @@
 @media screen and (max-width: 900px) {
- footer, ul  {
-     display: flex;
-     flex-direction: column;
-     @include flex-c;
-     padding-bottom: 40px;
-     padding-top: 40px;
-     padding-right: 0px;
+  footer,
+  ul {
+    display: flex;
+    flex-direction: column;
+    @include flex-c;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-right: 0px;
 
-     & h2 {
-         margin-left: -40px;
-     }
- } 
+    & h2 {
+      margin-left: -40px;
+    }
+  }
 
- .cards {
-     display: flex;
-     flex-direction: column;
+  .cards {
+    display: flex;
+    flex-direction: column;
 
-     & img {
-         height: 200px
-     }
- }
+    & img {
+      height: 200px;
+    }
+  }
+}
 
+@media screen and (max-width: 350px) {
+  header {
+    flex-direction: column;
+  }
 
-
+  nav {
+    @include flex-c;
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
 }

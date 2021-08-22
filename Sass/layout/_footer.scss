@@ -1,6 +1,6 @@
 footer {
     height: 50px;
-    background-color: $tertiary;
+    background-color: $secondary;
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,11 @@ footer {
     bottom: 0;
     
     & a, a:visited {
-        color: rgb(150, 62, 11) ;
+        color: rgb(250, 224, 137);
+    }
+
+    & h2 {
+        color: $primary;
     }
 
     & ul {
