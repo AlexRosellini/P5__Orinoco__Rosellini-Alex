@@ -55,7 +55,7 @@ header h1 {
   color: #fdec9f;
 }
 
-header a, header a:visited {
+header a, header a:link, header a:visited {
   color: #fae089;
 }
 
@@ -363,7 +363,7 @@ footer {
           align-items: center;
 }
 
-footer a, footer a:visited {
+footer a, footer a:link, footer a:visited {
   color: #fae089;
 }
 

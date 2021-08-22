@@ -10,7 +10,7 @@ header {
         color: $primary;
     }
 
-    & a, a:visited {
+    & a, a:link, a:visited {
         color: rgb(250, 224, 137);
     }
 
