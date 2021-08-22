@@ -8,7 +8,7 @@ async function productBuild(product) {
     <div class="card-product__description"><p>${product.description}</p></div>  
     <div class = "card-product__bottom">
     <div class="card-product__price"><p>Prix: ${product.price / 100} €</p></div>
-    <div class="card-product__personalize"><h3>Personalisez votre ours!</h3></div>
+    <div class="card-product__personalize"><h3>Personnalisez votre ours!</h3></div>
     <label for="color" class = card-product__label>Couleur:</label>
     <select class="card-product__colors" name="color"></select>
     <label class = "card-product__label"for="Quantity">Quantité:</label>
@@ -71,7 +71,7 @@ async function cartBtnEvent (product) {
       userCart.push(productString); //On ajoute notre objet dans l'array
       localStorage.setItem("product", JSON.stringify(userCart)); //On envoie vers le localstorage
 
-          let htmlConfirm = `<div class="card-product__confirm"><p>Votre produit à bien été enregistrer sur votre panier, 
+          let htmlConfirm = `<div class="card-product__confirm"><p>Votre produit a bien été enregistrer sur votre panier, 
           voulez vous <a href="panier.html">voir votre panier?</a> ou <a href="index.html">Voir nos autres produits?</a></p>
           </div>`
           document.querySelector(".card").innerHTML =  htmlConfirm; //On remplace l'article par un message de confirmation
@@ -81,7 +81,7 @@ async function cartBtnEvent (product) {
 /******************************************************************************/ 
 
 async function failProduct(err) {
-    let htmlError = `<div class="card-product__confirm"><p>Il semble y avoir eu une érreur, nous nous excusons du dérangement
+    let htmlError = `<div class="Fail"><p>Il semble y avoir eu une érreur, nous nous excusons du dérangement
     <a href="index.html">Souhaitez vous revenir à la boutique?</a></p>
     </div>`
     document.querySelector(".card").innerHTML = htmlError 
@@ -107,5 +107,4 @@ async function productPage () {
         await failProduct(err); //En cas d'érreur on appel la fonction qui gêre l'érreur.
     }
 }
-
 productPage() //On appel la fonction principale

@@ -12,7 +12,7 @@ async function indexBuild (products) {  //product est le result de notre premiè
         <div class="card__img"><img src="${products[i].imageUrl}"></div>
         <div class = "card__bottom">
         <div class="card__description"><p>${products[i].description}</p></div>
-        <div class="card__price"><p>Price : ${products[i].price / 100} €</p></div>
+        <div class="card__price"><p>Prix : ${products[i].price / 100} €</p></div>
         <div class="card__id"><a href="product.html?id=${products[i]._id}">Voir ce produit</a></div>
         </div>
         </div>`;

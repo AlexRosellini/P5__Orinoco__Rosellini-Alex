@@ -1,13 +1,13 @@
 /*****************************************************************************/
 
- let cartHTML = ""; //On créer une variable PageHTML vide pour le moment
+ let cartHTML = ""; //On créer une variable cartHTML vide pour le moment
 
 /******************************************************************************/ 
 //fonction pour créer notre panier
 
 async function cartBuild(userCart) {
     
-    if (userCart === null || userCart === 0) {
+    if (userCart === null || userCart.length === 0 || userCart === undefined) {
         let emptyCart = `<div class="panier__empty"><p>Votre panier est vide, <br><a href="index.html">Souhaitez vous découvrir 
         nos produits?</a>`;
         document.querySelector(".cart").innerHTML = emptyCart;
@@ -156,26 +156,18 @@ async function form(userCart) {
 }
 
 /******************************************************************************/
-//fonction en cas d'érreur
-async function failCart(err) {
-    let htmlFailCart = `<div class = "Fail"> <p>Nous avons rencontrer un problème lors de la validation de votre commande, merci de réessayer plus tard</p>`
-    document.querySelector(".cart").innerHTML = htmlFailCart;
-    console.log("Error: " + err) //On log l'érreur sur la console.log
-
-}
-
-/******************************************************************************/
 async function cartPage () {
     try {
         const userCart = JSON.parse(localStorage.getItem("product"));
         await cartBuild(userCart); 
+        console.log(userCart)
         const finalPrice = await totalPrice(userCart);
         await htmlCartBuild(finalPrice);
         await deleteCart(userCart);
         await form(userCart);
     }
     catch (err) {
-        console.log(err);
+        console.log("Error: " + err)
     }
 }
 cartPage()

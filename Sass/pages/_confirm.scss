@@ -1,5 +1,7 @@
 .article-confirm {
     @include padding-left-right;
+    min-height: 500px;
+
 
     & h1 {
         @include margin-top-bottom;
@@ -7,10 +9,6 @@
     & span {
         font-weight: bold;
     }
+
 }
 
-.footer-confirm {
-    bottom : 0;
-    position:fixed;
-    width: 100%;
-}

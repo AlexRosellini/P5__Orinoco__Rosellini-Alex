@@ -1,7 +1,6 @@
 html,
 body {
   margin: 0;
-  height: 100%;
 }
 
 body {
@@ -143,12 +142,12 @@ section h2 {
           transform: scale(1.01);
 }
 
-.fail {
+.Fail {
   text-align: center;
   min-height: 500px;
 }
 
-.fail a, .fail a:link, .fail a:visited {
+.Fail a, .Fail a:link, .Fail a:visited {
   color: #7c5100;
 }
 
@@ -335,6 +334,7 @@ section h2 {
 .article-confirm {
   padding-left: 20px;
   padding-right: 20px;
+  min-height: 500px;
 }
 
 .article-confirm h1 {
@@ -344,12 +344,6 @@ section h2 {
 
 .article-confirm span {
   font-weight: bold;
-}
-
-.footer-confirm {
-  bottom: 0;
-  position: fixed;
-  width: 100%;
 }
 
 footer {
@@ -367,7 +361,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  bottom: 0;
 }
 
 footer a, footer a:visited {
